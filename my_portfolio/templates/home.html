@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, I'm Diyorbek Turg'unboyev</h1>
+        <p class="lead">A passionate developer with a keen interest in building web applications.</p>
+        <hr class="my-4">
+        <p>Here you can find some of my projects and learn more about my skills.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'portfolio' %}" role="button">View Portfolio</a>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>About Me</h2>
+            <p>2nd year student of PDP University</p>
+            <p>Artificial Intelegnce</p>
+            <p>Python Backend Developer</p>
+            <p>Iot and Robotics technology</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Skills</h2>
+            <p>Html</p>
+            <p>Css</p>
+            <p>Javascript</p>
+            <p>Python</p>
+            <p>Django</p>
+            <p>Docker</p>
+            <p>Telegram Bot Aiogram</p>
+            <p>Docker</p>
+            <p>Linux</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Featured Projects</h2>
+            <p>Blog post website</p>
+            <p>Portfolio </p>
+            <p>E-commerce</p>
+        </div>
+    </div>
+{% endblock %}
