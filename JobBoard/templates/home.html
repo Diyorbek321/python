@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Board</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<!-- Header Section -->
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <h1>Welcome to Job Board</h1>
+    </div>
+</header>
+
+
+<!-- Main Content Section -->
+<main>
+    {% block content %}
+    <div class="container">
+        <!-- Job Listings Section -->
+        <section id="job-listings">
+            <h2>Latest Job Listings</h2>
+            <div class="job">
+                <h3>Job Title</h3>
+                {% for job in jobs %}
+                <p>{{ job.title }}</p>
+                <p>{{ job.company }}</p>
+                <p>{{ job.description }}</p>
+                <p>{{ job.salary }}</p>
+                <a href="#" class="button">Apply</a>
+            </div>
+        {% endfor %}
+            {% endblock content %}
+            <!-- Repeat the above job listing block for each job -->
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula urna nec luctus.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </section>
+    </div>
+</main>
+
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Job Board</p>
+</footer>
+
+</body>
+</html>

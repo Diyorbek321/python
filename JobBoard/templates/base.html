@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Job Board{% endblock %}</title>
+    <link href="{% static 'css/style.css' %}">
+    <!-- Include CSS and other necessary scripts -->
+</head>
+<body>
+<div id="navbar">
+    <!-- Navigation bar content -->
+</div>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+<div id="footer">
+    <!-- Footer content -->
+</div>
+</body>
+</html>
